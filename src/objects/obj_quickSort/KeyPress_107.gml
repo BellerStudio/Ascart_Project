@@ -1,0 +1,1 @@
+if (framerate > 1) framerate -= 1;
