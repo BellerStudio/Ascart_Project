@@ -1,0 +1,1 @@
+golomb_number += 1000;

@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Ascart_Project",
-    "path": "Ascart_Project.yyp",
+    "name": "BigNumber",
+    "path": "folders/BigNumber.yy",
   },
   "resourceVersion": "1.0",
-  "name": "math_functions",
+  "name": "bignum_muliply",
   "tags": [],
   "resourceType": "GMScript",
 }

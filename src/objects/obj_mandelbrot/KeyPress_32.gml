@@ -2,8 +2,8 @@ timer = get_timer();
 
 buffer_seek(mandel_buffer, buffer_seek_start, 0);
 
-for(var i = 0; i < mandel_mirror; i++) {
-	for(var j = 0; j < height; j++) {
+for (var i = 0; i < mandel_mirror; i++) {
+	for (var j = 0; j < height; j++) {
 
 		var b = map(i, 0, width, -2, 2);
 		var a = map(j, 0, height, -2, 2);

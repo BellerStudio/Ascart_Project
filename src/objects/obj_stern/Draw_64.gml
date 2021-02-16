@@ -12,7 +12,7 @@ if (!surface_exists(surf)) {
 		var array = stern_array[1];
 		var seq_len = array_length(array);
 		
-		for(var j = 0; j < seq_len; j++) {
+		for (var j = 0; j < seq_len; j++) {
 	
 			var _x, _y, multi;
 

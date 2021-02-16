@@ -8,7 +8,7 @@ if (!surface_exists(surf)) {
 	surface_set_target(surf);
 	
 	if (!draw_once) {
-		for(var i = 1; i < seq_len - 1; i++) {
+		for (var i = 1; i < seq_len - 1; i++) {
 		
 			var index, next, _x, radius, abs_rad;
 	

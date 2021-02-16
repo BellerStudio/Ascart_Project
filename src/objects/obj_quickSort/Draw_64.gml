@@ -1,4 +1,4 @@
-for(var i = 0; i < ar_size; i++) {
+for (var i = 0; i < ar_size; i++) {
 	
 	var _one_length = width / ar_size;
 	var _origin_x = i * _one_length;

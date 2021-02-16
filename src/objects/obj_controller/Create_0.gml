@@ -4,7 +4,7 @@ delta_factor = 1;
 
 #macro ALARMINACTIVE -100
 
-for(var i = 0; i < 16; i++) {
+for (var i = 0; i < 16; i++) {
 	Alarm[i] = ALARMINACTIVE;	
 }
 
