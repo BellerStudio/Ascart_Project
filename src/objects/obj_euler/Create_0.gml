@@ -13,7 +13,7 @@ out1 = -1;
 out2 = -1;
 out3 = -1;
 out4 = -1;
-iterations = 20;
+iterations = 100000;
 timer = 0;
 
 CONSTANTE = 0;

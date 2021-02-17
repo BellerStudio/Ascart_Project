@@ -6,3 +6,28 @@ room_width = width;
 room_height = height;
 window_set_size(width, height);
 surface_resize(application_surface, width, height);
+
+
+// Get an image from the internet and drawing it :
+
+create :
+file = 0;
+sprite = -1;
+alarm[0] = 1;
+
+alarm0 :
+file = http_get_file("https://picsum.photos/1366/768", working_directory + "image.jpg");
+
+AsyncHTPP :
+if (ds_map_find_value(async_load, "id") == file) {
+	
+	var status = ds_map_find_value(async_load, "status");
+   
+	if (status == 0) {
+	   
+		var path = ds_map_find_value(async_load, "result");
+		sprite = sprite_add(path, 1, false, false, 0, 0);
+		
+		alarm[0] = 60;
+	}
+}

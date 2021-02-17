@@ -20,9 +20,3 @@ draw_set_halign(fa_right);
 draw_set_valign(fa_bottom);
 draw_text(width - 20, height - 20, string(timer) +			" microseconds");
 draw_text(width - 20, height - 40, string(timer / 1000) +	" milliseconds");
-
-
-
-//draw_text(20, 100, "Press [Space] to refresh");
-//draw_text(20, 120, "Press [+] to add 100 iterations");
-//draw_text(20, 140, "Press [-] to remove 100 iterations");

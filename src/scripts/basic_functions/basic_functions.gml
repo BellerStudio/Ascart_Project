@@ -639,19 +639,68 @@ function word_value(str) {
 }
 
 
-function triangle_numbers(n) {
+// FORM: (1 -> Triangle, 2 -> Pentagon, 3 -> Hexagon) | MODE: true -> Return a list
+function geom_numbers(n, form, mode) {
 
-	var list = array_create(n);
-	var k;
+	if (mode == true) var list = array_create(n);
+	else var number = 0;
+	
 
-	for (var i = 0; i < n; i++) {
+
+	if (mode == true) {
 		
-		k = i + 1;
-		list[i] = (k * (k + 1)) / 2;
+		var k;
+		for (var i = 0; i < n; i++) {
+		
+			k = i + 1;
+			if (form == 1) list[i] = (k * (k + 1)) / 2;
+			else if (form == 2) list[i] = (k * (3 * k - 1)) / 2;
+			else if (form == 3) list[i] = k * (2 * k - 1);
+		}
+	} else {
+			
+		if (form == 1) number = (n * (n + 1)) / 2;
+		else if (form == 2) number = (n * (3 * n - 1)) / 2;
+		else if (form == 3) number = n * (2 * n - 1);
 	}
+	
+	if (mode == true) return list;
+	else return number;
+}
+
+
+function ferreira(n) {
+	
+	var list = [], z;
+	
+
 	
 	return list;
 }
+
+
+function triangle_area(a, b, c) {
+	
+	return ((b[0] - a[0]) * (a[1] - c[1])) / 2;
+}
+
+
+function segment_middle(a, b) {
+	
+	return [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2];
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
