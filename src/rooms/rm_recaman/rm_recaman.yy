@@ -47,7 +47,7 @@
   },
   "parent": {
     "name": "Recaman Sequence",
-    "path": "folders/Recaman Sequence.yy",
+    "path": "folders/Other Projects/Recaman Sequence.yy",
   },
   "resourceVersion": "1.0",
   "name": "rm_recaman",

@@ -3,7 +3,7 @@
   "isCompatibility": false,
   "parent": {
     "name": "Mandelbrot",
-    "path": "folders/Mandelbrot.yy",
+    "path": "folders/Other Projects/Mandelbrot.yy",
   },
   "resourceVersion": "1.0",
   "name": "scr_mandelbrot",

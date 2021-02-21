@@ -47,7 +47,7 @@
   },
   "parent": {
     "name": "Quicksort Visualization",
-    "path": "folders/Quicksort Visualization.yy",
+    "path": "folders/Other Projects/Quicksort Visualization.yy",
   },
   "resourceVersion": "1.0",
   "name": "rm_sort",

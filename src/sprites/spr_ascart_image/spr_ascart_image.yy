@@ -69,7 +69,7 @@
   ],
   "parent": {
     "name": "Sprites",
-    "path": "folders/ASCII Art/Sprites.yy",
+    "path": "folders/Other Projects/ASCII Art/Sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_ascart_image",

@@ -26,7 +26,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Objects",
-    "path": "folders/ASCII Art/Objects.yy",
+    "path": "folders/Other Projects/ASCII Art/Objects.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_controller",

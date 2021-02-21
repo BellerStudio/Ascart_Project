@@ -27,7 +27,7 @@ for (var i = 0; i < ar_size; i++) {
 }
 
 timer = get_timer();
-global.sort_save = array_create(0);
+
 ind_array = 0;
 
 

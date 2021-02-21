@@ -47,7 +47,7 @@
   },
   "parent": {
     "name": "Stern's Diatomic Sequence",
-    "path": "folders/Stern's Diatomic Sequence.yy",
+    "path": "folders/Other Projects/Stern's Diatomic Sequence.yy",
   },
   "resourceVersion": "1.0",
   "name": "rm_stern",

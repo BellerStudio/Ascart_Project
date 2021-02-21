@@ -47,7 +47,7 @@
   },
   "parent": {
     "name": "Golomb's Sequence",
-    "path": "folders/Golomb's Sequence.yy",
+    "path": "folders/Other Projects/Golomb's Sequence.yy",
   },
   "resourceVersion": "1.0",
   "name": "rm_golomb",

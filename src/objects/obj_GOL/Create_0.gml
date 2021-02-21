@@ -9,13 +9,11 @@ surface_resize(application_surface, width, height);
 randomize();
 
 // Setup
-out1 = -1;
-
 cel = 64;
 cols = width div cel;
 rows = height div cel;
 
-grid = make2DArray(cols, rows);
+grid = make_2D_array(cols, rows);
 
 for (var i = 0; i < rows; i++) {
 	for (var j = 0; j < cols; j++) {

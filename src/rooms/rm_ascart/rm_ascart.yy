@@ -53,7 +53,7 @@
   },
   "parent": {
     "name": "Rooms",
-    "path": "folders/ASCII Art/Rooms.yy",
+    "path": "folders/Other Projects/ASCII Art/Rooms.yy",
   },
   "resourceVersion": "1.0",
   "name": "rm_ascart",

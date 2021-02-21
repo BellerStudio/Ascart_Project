@@ -26,7 +26,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Mandelbrot",
-    "path": "folders/Mandelbrot.yy",
+    "path": "folders/Other Projects/Mandelbrot.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_mandelbrot",

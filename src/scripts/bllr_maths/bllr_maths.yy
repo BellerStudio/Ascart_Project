@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Ascart_Project",
-    "path": "Ascart_Project.yyp",
+    "name": "Beller Library",
+    "path": "folders/Beller Library.yy",
   },
   "resourceVersion": "1.0",
-  "name": "basic_functions",
+  "name": "bllr_maths",
   "tags": [],
   "resourceType": "GMScript",
 }

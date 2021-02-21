@@ -128,7 +128,7 @@
   "maintainGms1Font": false,
   "parent": {
     "name": "Fonts",
-    "path": "folders/ASCII Art/Fonts.yy",
+    "path": "folders/Other Projects/ASCII Art/Fonts.yy",
   },
   "resourceVersion": "1.0",
   "name": "ft_ASCII",

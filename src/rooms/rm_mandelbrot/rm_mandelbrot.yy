@@ -47,7 +47,7 @@
   },
   "parent": {
     "name": "Mandelbrot",
-    "path": "folders/Mandelbrot.yy",
+    "path": "folders/Other Projects/Mandelbrot.yy",
   },
   "resourceVersion": "1.0",
   "name": "rm_mandelbrot",

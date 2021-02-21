@@ -27,7 +27,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "TikTok Filter",
-    "path": "folders/TikTok Filter.yy",
+    "path": "folders/Other Projects/TikTok Filter.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_filter",

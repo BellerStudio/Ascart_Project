@@ -15,3 +15,48 @@ function bignum_multiply() {
 
 
 }
+
+
+function bignum_power(x, n) {
+	
+	var total = x;
+	
+	for (var i = 0; i < n - 1; i++) {
+		
+		total = bignum_multiply(x, total);	
+	}
+	
+	return total;
+}
+
+
+function bignum_factorial(n) {
+	
+	var sum = 1;
+	
+	for (var i = 2; i <= n; i++) {
+		
+		sum = bignum_multiply(sum, i);
+	}
+	
+	return sum;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
