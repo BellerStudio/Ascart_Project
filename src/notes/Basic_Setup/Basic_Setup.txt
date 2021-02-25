@@ -8,6 +8,8 @@ window_set_size(width, height);
 surface_resize(application_surface, width, height);
 
 
+
+
 // Get an image from the internet and drawing it :
 
 create :
@@ -30,4 +32,71 @@ if (ds_map_find_value(async_load, "id") == file) {
 		
 		alarm[0] = 60;
 	}
+}
+
+
+
+
+// PRIMES - POLAR COORDS
+
+var len = array_length(list);
+var p1, p2, _x1, _y1, _x2, _y2, _hue1, _hue2, col1, col2, len_div = (global.height / list[len - 1]) / 2;
+
+for (var i = 0; i < len - 1; i++) {
+	
+	p1 = list[i];
+	p2 = list[i + 1];
+	
+	_hue1 = map(i, 0, len, 0, 255);
+	_hue2 = map(i + 1, 0, len, 0, 255);
+	col1 = make_color_hsv(_hue1, 255, 255);
+	col2 = make_color_hsv(_hue2, 255, 255);
+	
+	
+	_x1 = lengthdir_x(p1 * len_div, radtodeg(p1)) + global.width / 2;
+	_y1 = lengthdir_y(p1 * len_div, radtodeg(p1)) + global.height / 2;
+	
+	_x2 = lengthdir_x(p2 * len_div, radtodeg(p2)) + global.width / 2;
+	_y2 = lengthdir_y(p2 * len_div, radtodeg(p2)) + global.height / 2;
+	
+
+	draw_point_color(_x1, _y1, col1);
+	draw_point_color(_x2, _y2, col2);
+	
+	//draw_line_color(global.width / 2 + _x1, global.height / 2 + _y1, global.width / 2 + _x2, global.height / 2 + _y2, col1, col2);
+}
+
+
+
+
+
+// BARNSLEY
+if (surface_exists(surf)) {
+	if (!do_once) {
+	
+		surface_set_target(surf);
+	
+		repeat(10) {
+			var next, px, py, mapper = (global.width - global.height) / 2;
+			px = map(_x, -2.1820, 2.6558, mapper, mapper + global.height);
+			py = map(_y, 0, 9.9983, global.height, 0);
+			var colX = map(px, mapper, mapper + global.height, 0, 125);
+			var colY = map(px, global.height, 0, 125, 0);
+			var colXY = make_color_hsv(colX + colY, 255, 255);
+		
+			draw_circle_color(px, py, 2, colXY, colXY, false);
+			
+			next = Barnsley(_x, _y);
+			_x = next[0];
+			_y = next[1];
+			counter++;
+		}
+		
+		surface_reset_target();
+		
+		
+		if (counter > iterations) do_once = true;
+	}
+	
+	draw_surface(surf, 0, 0);
 }

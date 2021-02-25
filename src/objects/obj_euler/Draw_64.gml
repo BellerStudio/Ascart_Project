@@ -36,19 +36,7 @@ if (!global.graph) {
 	draw_line(20, global.height - 40, global.width, global.height - 40);  // X
 	draw_line(40, 0, 40, global.height - 20);  // Y
 	draw_text(25, global.height - 35, "0");
-	
-	draw_surface(surf, 0, 0);
 }
 
 #endregion
-
-
-
-
-
-
-
-
-
-
 

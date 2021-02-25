@@ -2,9 +2,4 @@ timer = get_timer();
 
 
 
-
-
-
- 
-
-reset_timer = true;
+reset_timer  = true;

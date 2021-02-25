@@ -10,7 +10,7 @@ surface_resize(application_surface, width, height);
 
 // Setup
 stern_number = 4000;
-stern_array = stern_diatomic(stern_number, false);
+stern_array = Stern_diatomic(stern_number, false);
 timer = 0;
 refresh = true;
 surf = -1;

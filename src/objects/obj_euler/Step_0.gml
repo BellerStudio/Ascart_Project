@@ -27,8 +27,6 @@ if (!surface_exists(surf)) {
 	surf = surface_create(global.width, global.height);	
 }
 
-
-
 if (hue < 0) hue_set = true;	
 if (hue > 255) hue_set = false;
 if (hue_set) hue++;	

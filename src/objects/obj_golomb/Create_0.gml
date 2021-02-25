@@ -11,7 +11,7 @@ surface_resize(application_surface, width, height);
 // Setup
 timer = get_timer();
 golomb_number = 100;
-golomb_array = golomb_sequence(golomb_number);
+golomb_array = Golomb(golomb_number);
 timer = get_timer() - timer;
 
 refresh = true;

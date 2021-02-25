@@ -1,4 +1,4 @@
-stern_array = stern_diatomic(stern_number, false);
+stern_array = Stern_diatomic(stern_number, false);
 
 if (surface_exists(surf)) {
 	

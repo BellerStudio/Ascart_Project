@@ -1,4 +1,4 @@
-function stern_diatomic(n, mode) {
+function Stern_diatomic(n, mode) {
 
 	var table = array_create(n + 1);
 	var biggest = 0;
@@ -27,7 +27,7 @@ function stern_diatomic(n, mode) {
 }
 
 
-function golomb_sequence(n) {
+function Golomb(n) {
 	
 	var table = array_create(n + 1);
 	
@@ -41,7 +41,7 @@ function golomb_sequence(n) {
 }
 
 
-function syracuse(n, mode) {
+function Syracuse(n, mode) {
 	
 	if (mode) {
 		var results = [n];	
@@ -76,7 +76,7 @@ function syracuse(n, mode) {
 }
 
 
-function fibonacci(n) {
+function Fibonacci(n) {
 	
 	var calc = n - 2, a = 1, b = 1, temp;
 	
@@ -99,7 +99,7 @@ function fibonacci(n) {
 
 
 // FORM: (1 -> Triangle, 2 -> Pentagon, 3 -> Hexagon) | MODE: true -> Return a list
-function geom_numbers(n, form, mode) {
+function Geom_numbers(n, form, mode) {
 
 	if (mode == true) var list = array_create(n);
 	else var number = 0;
@@ -127,7 +127,7 @@ function geom_numbers(n, form, mode) {
 
 
 // Return if a number is a Lychrel number (Supposed Lychrel if there's more than 50 iterations (< 10000))
-function lychrel_50(n) {
+function Lychrel_50(n) {
 	
 	for (var i = 0; i < 50; i++) {
 		
@@ -141,3 +141,98 @@ function lychrel_50(n) {
 	
 	return false;
 }
+
+
+function Josephus(n, k) {
+	
+	if (n == 1) {
+		return 1;	
+	} else {
+		
+		return (Josephus(n - 1, k) + k - 1) % n + 1;
+	}
+}
+
+
+function Barnsley(_x, _y) {
+	
+	var next_x, next_y, rand;
+		
+	rand = random(1);
+
+	if (rand < 0.01) {
+		
+		next_x =  0;
+		next_y =  0.16 * _y;
+	}
+	
+	if (rand >= 0.01 && rand < 0.86) {
+
+		next_x =  0.85 * _x + 0.04 * _y;
+		next_y = -0.04 * _x + 0.85 * _y + 1.6;
+	}
+	
+	if (rand >= 0.86 && rand < 0.93) {
+		
+		next_x =  0.20 * _x - 0.26 * _y;
+		next_y =  0.23 * _x + 0.22 * _y + 1.6;
+	}
+	
+	if (rand >= 0.93) {
+		
+		next_x = -0.15 * _x + 0.28 * _y;
+		next_y =  0.26 * _x + 0.24 * _y + 0.44;
+	}
+
+
+	return [next_x, next_y];
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,5 +1,5 @@
 timer = get_timer();
-golomb_array = golomb_sequence(golomb_number);
+golomb_array = Golomb(golomb_number);
 timer = get_timer() - timer;
 
 if (surface_exists(surf)) {

@@ -1,6 +1,6 @@
 // Mostly used in Project Euler problems
 
-// Map function for a mandelbrot set
+// Map function
 function map(val, start1, end1, start2, end2) {
 	
 	var prop = (val - start1) / (end1 - start1);
