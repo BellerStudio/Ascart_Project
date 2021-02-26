@@ -40,3 +40,33 @@ if (!global.graph) {
 
 #endregion
 
+// BARNSLEY
+if (surface_exists(surf)) {
+	if (!do_once) {
+	
+		surface_set_target(surf);
+	
+		repeat(10) {
+			var next, px, py, mapper = (global.width - global.height) / 2;
+			px = map(_x, -2.1820, 2.6558, mapper, mapper + global.height);
+			py = map(_y, 0, 9.9983, global.height, 0);
+			var colX = map(px, mapper, mapper + global.height, 0, 125);
+			var colY = map(px, global.height, 0, 125, 0);
+			var colXY = make_color_hsv(colX + colY, 255, 255);
+		
+			draw_circle_color(px, py, 2, colXY, colXY, false);
+			
+			next = Barnsley(_x, _y);
+			_x = next[0];
+			_y = next[1];
+			counter++;
+		}
+		
+		surface_reset_target();
+		
+		
+		if (counter > iterations) do_once = true;
+	}
+	
+	draw_surface(surf, 0, 0);
+}

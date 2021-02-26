@@ -22,3 +22,8 @@ surf = -1;
 
 global.beep_on = false;
 global.graph = true;
+
+_x = 0;
+_y = 0;
+counter = 0;
+do_once = false;
