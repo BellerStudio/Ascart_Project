@@ -6,24 +6,27 @@ global.height = window_get_height();
 window_x = window_get_x();
 window_y = window_get_y();
 
-
 // Setup
+iterations = 700;
 out = -1;
 out2 = -1;
 out3 = -1;
 out4 = -1;
-iterations = 1000000;
+
+// Timer System
 timer = 0;
 reset_timer = false;
+
+// GUI
 c_rainbow = 0;
 hue = 0;
 hue_set = true;
-surf = -1;
 
-global.beep_on = false;
-global.graph = true;
-
+// Surface and Window Position
 _x = 0;
 _y = 0;
-counter = 0;
-do_once = false;
+surf = -1;
+
+// GUI Globals
+global.beep_on = false;
+global.graph = true;

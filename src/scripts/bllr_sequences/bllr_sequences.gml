@@ -98,31 +98,41 @@ function Fibonacci(n) {
 }
 
 
-// FORM: (1 -> Triangle, 2 -> Pentagon, 3 -> Hexagon) | MODE: true -> Return a list
-function Geom_numbers(n, form, mode) {
+function Poly_numbers(n, format) {
 
-	if (mode == true) var list = array_create(n);
-	else var number = 0;
-	
-	if (mode == true) {
-		
-		var k;
-		for (var i = 0; i < n; i++) {
-		
-			k = i + 1;
-			if (form == 1) list[i] = (k * (k + 1)) / 2;
-			else if (form == 2) list[i] = (k * (3 * k - 1)) / 2;
-			else if (form == 3) list[i] = k * (2 * k - 1);
-		}
-	} else {
+	var list = array_create(n);
+
+	for (var i = 0; i < n; i++) {
+
+		switch (format) {
 			
-		if (form == 1) number = (n * (n + 1)) / 2;
-		else if (form == 2) number = (n * (3 * n - 1)) / 2;
-		else if (form == 3) number = n * (2 * n - 1);
+			case 3:
+				list[i] = (i * (i + 1)) / 2;
+				break;
+			
+			case 4:
+				list[i] = sqr(i);
+				break;
+			
+			case 5:
+				list[i] = (i * (3 * i - 1)) / 2;
+				break;
+			
+			case 6:
+				list[i] = i * (2 * i - 1);
+				break;
+			
+			case 7:
+				list[i] = i * (5 * i - 3) / 2;
+				break;
+			
+			case 8:
+				list[i] = i * (3 * i - 2);
+				break;
+		}
 	}
-	
-	if (mode == true) return list;
-	else return number;
+
+	return list;
 }
 
 

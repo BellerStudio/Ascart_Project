@@ -78,11 +78,11 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"rm_recaman","path":"rooms/rm_recaman/rm_recaman.yy",},},
+    {"roomId":{"name":"rm_euler","path":"rooms/rm_euler/rm_euler.yy",},},
     {"roomId":{"name":"rm_golomb","path":"rooms/rm_golomb/rm_golomb.yy",},},
     {"roomId":{"name":"rm_ascart","path":"rooms/rm_ascart/rm_ascart.yy",},},
+    {"roomId":{"name":"rm_recaman","path":"rooms/rm_recaman/rm_recaman.yy",},},
     {"roomId":{"name":"rm_sort","path":"rooms/rm_sort/rm_sort.yy",},},
-    {"roomId":{"name":"rm_euler","path":"rooms/rm_euler/rm_euler.yy",},},
     {"roomId":{"name":"rm_stern","path":"rooms/rm_stern/rm_stern.yy",},},
     {"roomId":{"name":"rm_GOL","path":"rooms/rm_GOL/rm_GOL.yy",},},
     {"roomId":{"name":"rm_filter","path":"rooms/rm_filter/rm_filter.yy",},},
