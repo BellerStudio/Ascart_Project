@@ -21,6 +21,8 @@ if (_w != global.width) || (_h != global.height) {
 window_x = _x;
 window_y = _y;
 
+total_fps += fps_real;
+frames++;
 
 if (!surface_exists(surf)) {
 	

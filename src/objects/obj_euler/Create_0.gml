@@ -30,3 +30,7 @@ surf = -1;
 // GUI Globals
 global.beep_on = false;
 global.graph = true;
+
+frames = 0;
+total_fps = 0;
+

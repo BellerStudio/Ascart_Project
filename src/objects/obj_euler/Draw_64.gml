@@ -17,12 +17,14 @@ draw_set_valign(fa_top);
 
 if (!global.graph) {
 	draw_text(20, 30, "FPS: " + string(round(fps_real)));
-	draw_text(20, 60, "Iterations: " + string(iterations));
+	draw_text(20, 60, "Average FPS: " + string(round(total_fps / frames)));
 	
-	draw_text(20, 120, "Result 1: " + string(out));
-	draw_text(20, 150, "Result 2: " + string(out2));
-	draw_text(20, 180, "Result 3: " + string(out3));
-	draw_text(20, 210, "Result 4: " + string(out4));
+	draw_text(20, 90, "Iterations: " + string(iterations));
+	
+	draw_text(20, 150, "Result 1: " + string(out));
+	draw_text(20, 180, "Result 2: " + string(out2));
+	draw_text(20, 210, "Result 3: " + string(out3));
+	draw_text(20, 240, "Result 4: " + string(out4));
 
 	draw_set_halign(fa_right);
 	draw_set_valign(fa_bottom);
@@ -39,6 +41,3 @@ if (!global.graph) {
 }
 
 #endregion
-
-
-draw_text(100, 100, out);
