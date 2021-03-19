@@ -245,7 +245,7 @@ function is_leap(n) {
 
 
 // Split a string into an array
-function string_split(str) {
+function string_split(str, real_number) {
 	
 	str = string(str);
 	var str_len = string_length(str);
@@ -253,7 +253,8 @@ function string_split(str) {
 	
 	for (var k = 1; k <= str_len; k++) {
 		
-		split_list[k - 1] = string_char_at(str, k);
+		if (real_number) split_list[k - 1] = real(string_char_at(str, k));
+		else split_list[k - 1] = string_char_at(str, k);
 	}
 	
 	return split_list;
@@ -361,7 +362,7 @@ function is_pandigital(n) {
 // Convert uppercase chars to alphabetic value (A -> 1)
 function str_number(str) {
 	
-	var list = string_split(str);
+	var list = string_split(str, false);
 	var len = array_length(list);
 	var number;
 	
@@ -416,8 +417,8 @@ function array_count_diff(array) {
 // Check if a number is a permutation (12345 -> 54231)
 function is_permutation(a, b) {
 		
-	var split1 = string_split(string(a));
-	var split2 = string_split(string(b));
+	var split1 = string_split(string(a), false);
+	var split2 = string_split(string(b), false);
 	
 	var sorted1 = array_sort(split1, true);
 	var sorted2 = array_sort(split2, true);
@@ -519,6 +520,38 @@ function all_permutations_sum(n) {
 	
 	return sum * fact * real(str);
 }
+
+
+// Perfect square with n digits (Exemple: 100 - 999 -> 3 digits)
+function perfect_squares(n) {
+	
+	var a = power(10, n-1);
+	var b = a * 10 - 1;
+	
+	return [ceil(sqrt(a + 1)), floor(sqrt(b))];
+}
+
+
+function log_dif(i) {
+	
+    var logi = logn(2, 10) * i;
+    var diff = (logi - floor(logi));
+	
+    return diff
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
