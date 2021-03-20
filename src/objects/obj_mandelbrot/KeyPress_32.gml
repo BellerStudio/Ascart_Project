@@ -13,7 +13,7 @@ for (var i = 0; i < mandel_mirror; i++) {
 
 		var n = 0;
 
-		while(n < max_it) {
+		while (n < max_it) {
 			var aa = (a * a - b * b);
 			var bb = (2 * a * b);
 			a = aa + ca;

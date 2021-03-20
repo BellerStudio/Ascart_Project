@@ -1,4 +1,4 @@
-while(steps < max_steps) {
+while (steps < max_steps) {
 	var next = index - count;
 
 	if (next < 0 || numbers[next]) {

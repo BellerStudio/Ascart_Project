@@ -17,12 +17,12 @@ function partition(array, start, _end) {
 	for (var i = start; i < _end; i++) {
 		
 		if (array[i] < pivotValue) {
-			array = swap(array, i, pivotIndex);
+			array = com_swap(array, i, pivotIndex);
 			pivotIndex++;
 		}
 	}
 	
-	array = swap(array, pivotIndex, _end);
+	array = com_swap(array, pivotIndex, _end);
 	
 	return [array, pivotIndex];
 }
@@ -505,23 +505,6 @@ function binomial_coefficient(n, k) {
 }
 
 
-// Sum of all the possible permutations of a number
-function all_permutations_sum(n) {
-	
-	var sum = number_sum(n);
-	var len = string_length(string(n));
-	var fact = factorial(len - 1);
-	var str = "";
-	
-	for (var i = 1; i <= len; i++) {
-		
-		str += "1";	
-	}
-	
-	return sum * fact * real(str);
-}
-
-
 // Perfect square with n digits (Exemple: 100 - 999 -> 3 digits)
 function perfect_squares(n) {
 	
@@ -541,13 +524,99 @@ function log_dif(i) {
 }
 
 
+// Sum of all the possible permutations of a number
+function all_permutations_sum(n) {
+	
+	var sum = number_sum(n);
+	var len = string_length(string(n));
+	var fact = factorial(len - 1);
+	var str = "";
+	
+	for (var i = 1; i <= len; i++) {
+		
+		str += "1";	
+	}
+	
+	return sum * fact * real(str);
+}
 
 
+// Return an array of all the possible permutations
+function permute(array) {
+	
+	var n = array_length(array);
+	var list = [];
+	
+	array_sort(array, true);
+	
+	while (true) {
+		
+		var temp = [];
+		array_copy(temp, 0, array, 0, array_length(array));
+		array_push(list, temp);
+
+		var i = n - 1;
+		while (array[i - 1] >= array[i]) {
+			
+			i--;
+			if (i == 0) return list;
+		}
+		
+		var j = n - 1;
+		while (j > i && array[j] <= array[i - 1]) {
+			
+			j--;
+		}
+		
+		swap(array, i - 1, j);
+		array_reverse(array, i, n - 1);
+	}
+}
 
 
+// Returns a list of permuted strings from a string
+function permute_string(str) {
+	
+	var array = string_split(str, false);
+	var list = permute(array);
+	
+	var len = array_length(list);
+	var temp;
+	
+	for (var i = 0; i < len; i++) {
+		
+		temp = array_to_string(list[i]);
+		list[i] = temp;
+	}
+	
+	return list;
+}
 
 
+// Returns a list of permuted numbers from a number
+function permute_number(number) {
+	
+	var str = string(number);
+	var array = string_split(str, false);
+	var list = permute(array);
+	
+	var len = array_length(list);
+	var temp;
+	
+	for (var i = 0; i < len; i++) {
+		
+		temp = real(array_to_string(list[i]));
+		list[i] = temp;
+	}
+	
+	return list;
+}
 
+
+function kth_power() {
+	
+	
+}
 
 
 

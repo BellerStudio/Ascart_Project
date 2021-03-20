@@ -37,7 +37,7 @@ function array_shuffle(array) {
 
 
 // Swap two values and save every steps in an array (To visualize an algorithm)
-function swap(array, a, b) {
+function com_swap(array, a, b) {
 	
 	var temp = array[a];
 	array[a] = array[b];
@@ -73,7 +73,7 @@ function array_sorted_ascend(array) {
 
 
 // Swap two values in an array (by reference)
-function basic_swap(array, a, b) {
+function swap(array, a, b) {
 	
 	var temp = array[a];
 	array[@ a] = array[b];
@@ -103,7 +103,8 @@ function quickSort(array, start, _end) {
 // Yeah, Bogo sorting ... don't try with more than 7 numbers
 function bogoSort(array) {
 	
-	while(!array_sorted_ascend(array)) {
+	while (!array_sorted_ascend(array)) {
+		
 		array_shuffle(array);
 	}
 	
@@ -153,6 +154,32 @@ function DLA_particles(width, height) {
 	}
 	
 	return array;
+}
+
+
+// Reverse an array between two values
+function array_reverse(array, a, b) {
+	
+	while (a < b) {
+		
+		swap(array, a, b);
+		a++;
+		b--;
+	}
+}
+
+
+// Converts an array into a string
+function array_to_string(array) {
+	
+	var str = "";
+	var len = array_length(array);
+	for (var i = 0; i < len; i++) {
+		
+		str += array[i];
+	}
+	
+	return str;
 }
 
 

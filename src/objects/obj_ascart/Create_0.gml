@@ -19,7 +19,7 @@ ascart_render_surf = -1;
 global.update_surf = true;
 
 // Quality
-ascart_quality = 0.5;
+ascart_quality = 1;
 ascart_char_brightness = 2;
 
 // Shaders

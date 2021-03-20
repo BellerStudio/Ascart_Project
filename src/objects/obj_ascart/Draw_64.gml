@@ -28,8 +28,13 @@ draw_set_font(-1);
 draw_set_halign(fa_right);
 var _text_x = global.win_w - 20;
 
-draw_text(_text_x, 20, string(fps_real) + " FPS");
+draw_text(_text_x, 20, string(floor(fps_real * 10)) + " FPS");
 //draw_text(_text_x, 40, string(timer / 1000) + "ms");
+
+draw_set_halign(fa_middle);
+draw_text(1600, 40, "Image converted into tiny ASCII characters");
+draw_text(1600, 60, "The Art Of Code, That's what I love");
+/*
 draw_text(_text_x, 60, "Ascart Buffer : " + string(buffer_get_size(ascart_buffer)));
 draw_text(_text_x, 80, "Ascart Output : " + string(buffer_get_size(ascart_out)));
 
@@ -37,6 +42,6 @@ if (surface_exists(ascart_copy_surf)) {
 	draw_text(_text_x, 100, "Copy Surf X : " + string(surface_get_width(ascart_copy_surf)));
 	draw_text(_text_x, 120, "Copy Surf Y : " + string(surface_get_height(ascart_copy_surf)));
 }
-
+*/
 draw_rectangle(0, 0, surface_get_width(ascart_copy_surf), surface_get_height(ascart_copy_surf), false);
 draw_surface(ascart_copy_surf, 0, 0);
