@@ -199,7 +199,21 @@ function Barnsley(_x, _y) {
 }
 
 
-
+function NonSqr_sequence(number) {
+	
+	var list = [];
+	
+	for (var i = 2; i <= number; i++) {
+		
+		var temp = sqrt(i);
+		if (temp != floor(temp)) {
+			
+			array_push(list, i);
+		}
+	}
+	
+	return list;
+}
 
 
 

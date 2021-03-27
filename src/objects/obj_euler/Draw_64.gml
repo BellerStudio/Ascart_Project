@@ -25,6 +25,7 @@ if (!global.graph) {
 	draw_text(20, 180, "Result 2: " + string(out2));
 	draw_text(20, 210, "Result 3: " + string(out3));
 	draw_text(20, 240, "Result 4: " + string(out4));
+	draw_text(20, 270, "High-Precision Result: " + string_format(pOut, 1, pOut_precision));
 
 	draw_set_halign(fa_right);
 	draw_set_valign(fa_bottom);

@@ -29,6 +29,7 @@ function partition(array, start, _end) {
 
 
 function nth_root(x, n) {
+	
 	return power(x, (1/n));
 }
 
@@ -295,7 +296,7 @@ function allRotationsPrime(n) {
 }
 
 
-// Convert a number into binary
+// Convert a number into a binary number
 function binary(dec) {
 	
 	var bin;
@@ -613,10 +614,83 @@ function permute_number(number) {
 }
 
 
-function kth_power() {
+// Returns the number of digits of the nth root of a number
+function digits_of_nth_root(number, nth) {
 	
-	
+	return ceil(string_length(string(number)) / nth);
 }
+
+
+// Returns a precise version of the square root of a number
+function sqrt_newton(x, precision) {
+
+	var r = x;
+	precision = power(10, -precision);
+	
+	while (abs(x - r*r) > precision) {
+		
+		r = (r + x / r) / 2;
+	}
+	
+	return r;
+}
+
+
+// Find the smallest solution for x² + Dy² = 1
+function Diophantine_equation_PB66(D) {
+	
+	var _x;
+	var _y = 1;
+	var temp;
+	var result = -1;
+	
+	while (result != 1) {
+	
+		temp = sqrt(1 + D * sqr(_y));
+		if (temp == floor(temp)) {
+			
+			_x = temp;
+			result = sqr(_x) - (D * sqr(_y));
+		}
+		
+		_y++;
+	}
+	
+	return [_x, _y];
+}
+
+
+// Returns true if n is a near power sum (Example : 35 -> 3² + 5² = 34) (n + 1 or n - 1)
+function near_power(n) {
+	
+	var str_split = string_split(n, true);
+	var str_len = array_length(str_split);
+	var sum = 0;
+	
+	for (var i = 0; i < str_len; i++) {
+		
+		sum += power(str_split[i], str_len);
+	}
+	
+	if (sum == n - 1 || sum == n + 1) return true;
+	else return false;
+}
+
+
+// Returns the borders of n digits numbers (Example : 3 digits -> 100 and 999)
+// if "less" is equal to true, the border is equal to 1;
+function digits_number_borders(number_of_digits, is_less) {
+	
+	if (!is_less) var LOW = power(10, number_of_digits - 1);
+	else var LOW = 1;
+	
+	var HIGH = power(10, number_of_digits) - 1;
+	
+	return [LOW, HIGH];
+}
+
+
+
 
 
 
