@@ -378,6 +378,20 @@ function str_number(str) {
 }
 
 
+// Convert only one char into the number (A -> 1)
+function letter_to_number(str) {
+	
+	return ord(str) - 64;
+}
+
+
+// Convert only one number into a char (1 -> A)
+function number_to_letter(number) {
+	
+	return chr(number + 64);
+}
+
+
 // Value of every char added together
 function word_value(str) {
 	
@@ -660,6 +674,43 @@ function Diophantine_equation_PB66(D) {
 }
 
 
+// Returns the borders of n digits numbers (Example : 3 digits -> 100 and 999)
+// if "less" is equal to true, the border is equal to 1;
+function digits_number_borders(number_of_digits, is_less) {
+	
+	if (!is_less) var LOW = power(10, number_of_digits - 1);
+	else var LOW = 1;
+	
+	var HIGH = power(10, number_of_digits) - 1;
+	
+	return [LOW, HIGH];
+}
+
+
+function all_divisors(n) {
+	
+	var list = [];
+
+	for (var i = 1; i*i < n; i++) {
+		
+		if (n % i == 0) {
+			
+			array_push(list, i);
+		}
+	}
+	
+	for (var j = sqrt(n); j >= 1; j--) {
+		
+		if (n % j == 0) {
+			
+			array_push(list, n / j);
+		}
+	}
+	
+	return list;
+}
+
+
 // Returns true if n is a near power sum (Example : 35 -> 3² + 5² = 34) (n + 1 or n - 1)
 function near_power(n) {
 	
@@ -677,17 +728,21 @@ function near_power(n) {
 }
 
 
-// Returns the borders of n digits numbers (Example : 3 digits -> 100 and 999)
-// if "less" is equal to true, the border is equal to 1;
-function digits_number_borders(number_of_digits, is_less) {
-	
-	if (!is_less) var LOW = power(10, number_of_digits - 1);
-	else var LOW = 1;
-	
-	var HIGH = power(10, number_of_digits) - 1;
-	
-	return [LOW, HIGH];
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

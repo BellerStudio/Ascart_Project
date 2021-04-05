@@ -10,8 +10,9 @@ surface_resize(application_surface, width, height);
 
 
 
-// Get an image from the internet and drawing it :
 
+
+// Get an image from the internet and drawing it :
 create :
 file = 0;
 sprite = -1;
@@ -33,6 +34,8 @@ if (ds_map_find_value(async_load, "id") == file) {
 		alarm[0] = 60;
 	}
 }
+
+
 
 
 
@@ -70,6 +73,8 @@ for (var i = 0; i < len - 1; i++) {
 
 
 
+
+
 // BARNSLEY
 if (surface_exists(surf)) {
 	if (!do_once) {
@@ -100,3 +105,82 @@ if (surface_exists(surf)) {
 	
 	draw_surface(surf, 0, 0);
 }
+
+
+
+
+
+
+// DISCORD CRYPTO
+var list = ["R", "T", "S", "A", "A", "B", "C", "R", "G", "A", "O", "V", "S", "R", 
+"E", "O", "E", "U", "S", "O", "S", "P", "E", "V", "O", "T", "E", "C", "O", "U", "R", "M",
+"E", "R", "F", "O", "F", "A", "E", "N", "T", "M", "U", "V", "N", "E", "T", "S", "O", "I", "R", "T"];
+
+var key_1 = ["66", "FF", "FF", "7E", "7E", "FF", "FF", "66"];
+var key_2 = ["00", "55", "01", "12", "04", "44", "10", "0C"];
+var key_1_dec = [102, 255, 255, 126, 126, 255, 255, 102];
+var key_2_dec = [0, 85, 1, 18, 4, 68, 16, 12];
+var key_1_2 = [102, 170, 254, 108, 122, 187, 239, 90];
+
+var count = 0;
+var key_len = array_length(key_2_dec);
+var len = array_length(list);
+
+for (var i = 0; i < len; i++) {
+
+	if (count == key_len - 1) count = 0;
+	
+	var clc = (letter_to_number(list[i]) + key_2_dec[count] - 1) % 26;
+	list[i] = number_to_letter(clc);
+	
+	count++;
+}
+
+out = array_to_string(list);
+
+
+
+
+
+
+// TXT PARSER
+var input = open_txt("DAY2.txt", true);
+var input_len = array_length(input);
+
+var current = [0, 0, 0];
+var line, line_len, sum = "", char, count = 0;
+var result = 0;
+
+
+for (var i = 0; i < input_len; i++) {
+	
+	line = input[i];
+	line_len = string_length(line);
+	
+	for (var j = 1; j <= line_len; j++) {
+		
+		char = string_char_at(line, j);
+		
+		if (char == "x") {
+			
+			current[count] = real(sum);
+			sum = "";
+			count++;
+		} else sum += char;
+	}
+	
+	current[count] = real(sum);
+	count = 0;
+	sum = "";
+}
+
+out = result;
+
+
+
+
+
+
+
+
+

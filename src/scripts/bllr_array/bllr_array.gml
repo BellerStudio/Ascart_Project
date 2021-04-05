@@ -112,8 +112,9 @@ function bogoSort(array) {
 }
 
 
-// Convert a text file into an array
-function txt_array(filename) {
+// Load a text file into an array
+// Mode: True -> lines, Mode: False -> chars
+function open_txt(filename, mode) {
 	
 	var txt = file_text_open_read(filename);
 	var line, line_len;
@@ -122,18 +123,22 @@ function txt_array(filename) {
 	while (!file_text_eof(txt)) {
 	
 		line = file_text_read_string(txt);
-		line_len = string_length(line);
-	
-		for (var i = 1; i <= line_len; i++) {
 		
-			array_push(array, real(string_char_at(line, i)));
+		if (mode) {
+			
+			array_push(array, line);
+		} else {
+			
+			line_len = string_length(line);
+			for (var i = 1; i <= line_len; i++) {
+				array_push(array, string_char_at(line, i));
+			}
 		}
 	
 		file_text_readln(txt);
 	}
 
 	file_text_close(txt);
-	
 	return array;
 }
 
@@ -181,6 +186,70 @@ function array_to_string(array) {
 	
 	return str;
 }
+
+
+// Function to return gcd of a and b
+function GCD(a, b) {
+	
+	if (a == b) {
+		
+		return b;
+	}
+	
+	return GCD(b % a, a);
+}
+
+
+// Function to find gcd of array of
+// numbers
+function find_GCD(array, n) {
+	
+    var result = array[0];
+    for (var i = 1; i < n; i++) {
+		
+        result = GCD(array[i], result);
+ 
+        if(result == 1) {
+			
+			return 1;
+        }
+    }
+	
+    return result;
+}
+
+
+// Returns the min and the max values of the array
+function array_min_max(array) {
+	
+	array_sort(array, true);
+	return[array[0], array_pop(array)];
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

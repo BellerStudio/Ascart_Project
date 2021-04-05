@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "BigNumber",
-    "path": "folders/BigNumber.yy",
+    "name": "Beller Library",
+    "path": "folders/Beller Library.yy",
   },
   "resourceVersion": "1.0",
-  "name": "bignum_muliply",
+  "name": "bllr_numbers",
   "tags": [],
   "resourceType": "GMScript",
 }

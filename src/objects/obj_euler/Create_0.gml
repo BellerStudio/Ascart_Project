@@ -37,9 +37,3 @@ surf = -1;
 // GUI Globals
 global.beep_on = false;
 global.graph = false;
-
-// TEST
-HTTP = -1;
-HTTP_RES = "";
-
-
