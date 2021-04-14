@@ -27,6 +27,28 @@ function partition(array, start, _end) {
 	return [array, pivotIndex];
 }
 
+// Partition for a quicksort
+function QS_partition(array, start, _end) {
+	
+	var pivotIndex = start;
+	var pivotValue = array[_end];
+	
+	for (var i = start; i < _end; i++) {
+
+		if (array[i] < pivotValue) {
+			
+			swap(array, i, pivotIndex);
+			pivotIndex++;
+		}
+		
+		i++;
+	}
+	
+	swap(array, pivotIndex, _end);
+	
+	return [array, pivotIndex];
+}
+
 
 function nth_root(x, n) {
 	
@@ -363,6 +385,7 @@ function is_pandigital(n) {
 // Convert uppercase chars to alphabetic value (A -> 1)
 function str_number(str) {
 	
+	str = string_upper(str);
 	var list = string_split(str, false);
 	var len = array_length(list);
 	var number;

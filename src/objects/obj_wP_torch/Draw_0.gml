@@ -1,0 +1,1 @@
+draw_rectangle_color(x, y, x + WP.division, y + WP.division, c_blue, c_blue, c_blue, c_blue, false);

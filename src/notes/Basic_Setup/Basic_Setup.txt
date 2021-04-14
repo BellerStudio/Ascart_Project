@@ -74,7 +74,6 @@ for (var i = 0; i < len - 1; i++) {
 
 
 
-
 // BARNSLEY
 if (surface_exists(surf)) {
 	if (!do_once) {
@@ -175,12 +174,3 @@ for (var i = 0; i < input_len; i++) {
 }
 
 out = result;
-
-
-
-
-
-
-
-
-

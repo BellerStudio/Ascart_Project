@@ -1,10 +1,10 @@
 // Create a 2D array with cols & rows
-function make_2D_array(cols, rows) {
+function array_2D(cols, rows, datatype) {
 	
-	var grid = array_create(cols);
+	var grid = array_create(cols, datatype);
 	for (var n = 0; n < cols; n++) {
 	
-		grid[n] = array_create(rows);
+		grid[n] = array_create(rows, datatype);
 	}
 	
 	return grid;
@@ -85,10 +85,11 @@ function swap(array, a, b) {
 function quickSort(array, start, _end) {
 	
 	if (start >= _end) {
-		return;
+		
+		return array;
 	}
 	
-	var temp = partition(array, start, _end);
+	var temp = QS_partition(array, start, _end);
 	
 	array = temp[0];
 	var index = temp[1];
@@ -227,7 +228,20 @@ function array_min_max(array) {
 }
 
 
-
+// Returns an array multiplied by a scalar
+function array_multiply(array, scalar) {
+	
+	var len = array_length(array);
+	var i = 0;
+	
+	repeat(len - 1) {
+		
+		array[i] *= scalar;
+		i++;
+	}
+	
+	return array;
+}
 
 
 

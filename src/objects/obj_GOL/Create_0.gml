@@ -13,7 +13,7 @@ cel = 64;
 cols = width div cel;
 rows = height div cel;
 
-grid = make_2D_array(cols, rows);
+grid = array_2D(cols, rows, 0);
 
 for (var i = 0; i < rows; i++) {
 	for (var j = 0; j < cols; j++) {

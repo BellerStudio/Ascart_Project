@@ -1,0 +1,20 @@
+Loops :
+iterations : 100,000
+while loop [++] -> 11.36 µs
+for loop [++] -> 17.2 µs
+for loop [--] -> 17.8 µs
+repeat loop	  -> 9.4 µs
+
+
+Variables : (by Dragonite)
+instance.variable : 302.84 µs
+globalvar variable : 93.29 µs
+global.variable : 94.60 µs
+<self>.variable : 70.08 µs
+var variable : 93.98 µs
+
+
+Sorting :
+Array of 1,000 values
+array_sort : 0.22 µs
+quickSort : 5.11 µs (for loop [++])
