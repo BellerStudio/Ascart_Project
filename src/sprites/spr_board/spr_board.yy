@@ -67,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"628d2f3f-2116-4ac1-96ba-b05b5df315ea","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "TikTok Filter",
     "path": "folders/Other Projects/TikTok Filter.yy",
