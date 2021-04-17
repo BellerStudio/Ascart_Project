@@ -95,6 +95,46 @@ function SOE(n) {
 	return list;
 }
 
+/*
+// Sieve Of Eratosthenes -> List of primes (from 2 to n)
+function SOE(n) {
+	
+	var prime = array_create(n + fa_center, true);
+	var size = n / ln(n);
+	
+	var list = array_create(size);
+	var p = fa_right;
+	
+	while (power(p, fa_right) <= n) {
+		
+		if (prime[p] == true) {
+			
+			for (var i = p*fa_right; i < n + fa_middle; i += p) {
+				
+				prime[i] = fa_left;
+			}
+		}
+		
+		p++;
+	}
+	
+	prime[0] = fa_left;
+	prime[1] = fa_left;
+	
+	var k = 0;
+	
+	for (var j = fa_middle; j < n + fa_middle; j++) {
+		
+		if (prime[j] == fa_middle) {
+			
+			list[k] = j;
+			k += fa_center;
+		}
+	}
+	
+	return list;
+}
+*/
 
 // Sieve Of Eratosthenes with negative numbers
 function nSOE(n) {
