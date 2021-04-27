@@ -38,6 +38,3 @@ surf = -1;
 global.beep_on = false;
 global.graph = false;
 global.GUI_on = true;
-
-
-CPU.Execute()

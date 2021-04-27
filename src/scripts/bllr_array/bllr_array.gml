@@ -244,8 +244,21 @@ function array_multiply(array, scalar) {
 }
 
 
-
-
+function files_list(directory, file_type) {
+	
+	var i = 0;
+	var filesArray = [];
+	var fileName = file_find_first(directory + "*." + file_type, fa_directory);
+	
+	while (fileName != "") {
+		
+		filesArray[i] = fileName;
+		fileName = file_find_next();
+		i++;
+	}
+	
+	return filesArray;
+}
 
 
 
