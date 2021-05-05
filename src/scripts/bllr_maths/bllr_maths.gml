@@ -791,13 +791,65 @@ function near_power(n) {
 }
 
 
+// Euler’s Totient Function
+function totient(n) {
+	
+	var res = n;
+	var p = 2;
+	while (p*p <= n) {
+		
+		if (n % p == 0) {
+			
+			while (n % p == 0) n = floor(n / p);
+			res -= floor(res / p);
+		}
+		
+		p++;
+	}
+	
+	return res;
+}
 
 
 
+// Function to generate a random list
+function PB756_function(n) {
+
+	return n;
+}
 
 
+// Sum from 1 to n (1 -> 100 = 5050)
+function integers_sum(n) {
+	
+	return ((PB756_function(n) * (PB756_function(n) + 1)) / 2);
+}
 
 
+function PB756(n, m) {
+		
+	var prev = 0;
+	var curr = 0;
+	var S_star = 0;
+	
+	var S = integers_sum(n);
+	var max_rand = floor(n / m);
+	
+	var i = 0;
+	
+	repeat(m) {
+		
+		//if (i < m / 2) curr = prev + 1;
+		//else curr = prev + 2;
+		curr = prev + 1;
+		
+		S_star = integers_sum(curr) * (curr - prev);
+		prev = curr;
+		i++;
+	}
+	
+	return S_star;
+}
 
 
 

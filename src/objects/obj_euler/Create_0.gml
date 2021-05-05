@@ -38,3 +38,8 @@ surf = -1;
 global.beep_on = false;
 global.graph = false;
 global.GUI_on = true;
+
+
+// URL TEST
+url_test = "";
+url_callback = 0;
