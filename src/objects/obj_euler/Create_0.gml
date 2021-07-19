@@ -36,5 +36,5 @@ surf = -1;
 
 // GUI Globals
 global.beep_on = false;
-global.graph = false;
+global.graph = true;
 global.GUI_on = true;

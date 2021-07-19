@@ -10,6 +10,14 @@ function array_2D(cols, rows, datatype) {
 	return grid;
 }
 
+// Get a random value in an array
+function array_random(array) {
+	
+	var len = array_length(array);
+	var rand = irandom_range(0, len-1);
+	return [array[rand], rand];
+}
+
 
 // Shuffle an array and save every steps in an array (To visualize an algorithm)
 global.sort_save = array_create(0);

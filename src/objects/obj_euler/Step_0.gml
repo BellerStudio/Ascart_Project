@@ -34,3 +34,33 @@ if (hue > 255) hue_set = false;
 if (hue_set) hue++;	
 else hue--;
 c_rainbow = make_color_hsv(hue, 255, 255);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
